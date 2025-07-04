@@ -85,8 +85,10 @@ function AppNavbar() {
   return (
     <div>
       <SideNav isOpen={sideNavOpen} onClose={() => setSideNavOpen(false)} />
-      <nav className="bg-gray-900 text-white h-14  w-full flex items-center px-4  top-0 left-0 z-50">
-        <div className="w-full flex flex-wrap justify-between items-center gap-2  ">
+      <nav className="bg-gray-900 text-white h-14  w-full flex items-center px-4 fixed top-0 left-0 z-50">
+        {" "}
+        {/*fixed issue -> cant scroll */}
+        <div className="w-full flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center ">
             <NavLink to="/">
               <img src="Logo1.png" className="h-10 w-18 m-2 bg-gray-900" />
@@ -127,7 +129,7 @@ function AppNavbar() {
             <button className="cursor-pointer bg-yellow-400 p-2">search</button>
           </div>
 
-          <div className="flex flex-wrap gap-4 text-sm whitespace-nowrap ml-auto items-center justify-end">
+          <div className=" md:flex col-span-8 justify-end gap-4 text-sm whitespace-nowrap ml-auto">
             <div
               className="relative"
               onMouseEnter={() => setSignInModal(true)}
@@ -140,7 +142,7 @@ function AppNavbar() {
                 Sign In
               </NavLink>
               {signInModal && (
-                <div className=" top-full mt-2 right-0 w-64 bg-white text-black shadow-xl p-4 z-50 rounded border border-gray-300">
+                <div className="absolute top-full mt-2 right-0 w-64 bg-white text-black shadow-xl p-4 z-50 rounded border border-gray-300">
                   <h3 className="font-semibold mb-2 text-lg">
                     Sign in to your account
                   </h3>
@@ -177,34 +179,31 @@ function AppNavbar() {
           </div>
         </div>
       </nav>
-      {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4"> */}
-      <nav className="bg-gray-800 text-white text-sm h-10 w-full flex items-center px-2 overflow-x-auto whitespace-nowrap space-x-6 fixed top-14 left-0 z-30">
-        <div className="flex items-center space-x-2 ">
-          <button
-            onClick={() => setSideNavOpen(true)}
-            className="text-lg font-bold cursor-pointer hover:text-yellow-400 "
-          >
-            ☰
-          </button>
-          <NavLink
-            to="/"
-            className="hover:text-yellow-400 whitespace-nowrap min-w-max"
-          >
-            All
-          </NavLink>
-        </div>
-        {secondNavItems.map((item, index) => (
-          <NavLink
-            key={index}
-            to={item.path}
-            className="hover:text-yellow-400 whitespace-nowrap min-w-max"
-          >
-            {item.label}
-          </NavLink>
-        ))}
-      </nav>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4">
+        <nav className="bg-gray-800 text-white text-sm h-10 w-full flex items-center px-2 overflow-x-auto whitespace-nowrap space-x-6 fixed top-14 left-0 z-30">
+          <div className="flex items-center space-x-2 ">
+            <button
+              onClick={() => setSideNavOpen(true)}
+              className="text-lg font-bold cursor-pointer hover:text-yellow-400 "
+            >
+              ☰
+            </button>
+            <NavLink to="/" className="hover:text-yellow-400 whitespace-nowrap">
+              All
+            </NavLink>
+          </div>
+          {secondNavItems.map((item, index) => (
+            <NavLink
+              key={index}
+              to={item.path}
+              className="hover:text-yellow-400 whitespace-nowrap"
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
     </div>
-    // </div>
   );
 }
 

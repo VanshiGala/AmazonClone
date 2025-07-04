@@ -23,7 +23,7 @@ function App() {
 
       <SideNav />
 
-      <div className="flex-grow pt-[6.5rem] ">
+      <div className="flex-grow pt-20 ">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products/ac" element={<AcPage />} />
