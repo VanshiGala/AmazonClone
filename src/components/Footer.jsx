@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <div className="bg-gray-800 w-full text-white px-4 py-6 h-70">
-        <div className="w-full flex flex-wrap justify-between gap-6 text-sm">
+        <div className="w-full flex flex-wrap justify-between gap-2 text-sm">
           <div>
             <p className="font-bold text-lg">Get to know us!</p>
             <p className="text-gray-400">
@@ -68,7 +68,7 @@ function Footer() {
         </div>
       </div>
       <div className="bg-gray-900 text-white w-full px-6 py-8">
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-6 text-sm">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 px-6 text-sm">
           <div>
             <p className="font-bold">AbeBooks</p>
             <p className="text-gray-400">
