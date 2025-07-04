@@ -5,7 +5,7 @@ function CartPage() {
   const { cartItems, removeFromCart } = useCart();
 
   const totalAmount = cartItems.reduce((acc, item) => {
-    const num = parseInt(item.price.replace(/[₹,]/g, ""));
+    const num = parseInt(item.price.replace(/[Rs,]/g, ""));
     return acc + num;
   }, 0);
 
@@ -46,7 +46,7 @@ function CartPage() {
 
           <div className="mt-8 text-right">
             <h2 className="text-xl font-semibold">
-              Total: ₹{totalAmount.toLocaleString("en-IN")}
+              Total: Rs{totalAmount.toLocaleString("en-IN")}
             </h2>
             <button className="mt-2 bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded">
               Proceed to Checkout

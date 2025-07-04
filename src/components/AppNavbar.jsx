@@ -87,7 +87,7 @@ function AppNavbar() {
       <SideNav isOpen={sideNavOpen} onClose={() => setSideNavOpen(false)} />
       <nav className="bg-gray-900 text-white h-14  w-full flex items-center px-4 fixed top-0 left-0 z-50">
         {" "}
-        {/*fixed issue -> cant scroll */}
+        {/*"fixed" issue -> cant scroll */}
         <div className="w-full flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center ">
             <NavLink to="/">
