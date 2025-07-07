@@ -1,10 +1,10 @@
-import React ,{useState}from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import HorizontalOffer from "../components/HorizontalOffer";
 import SlidingBanner from "../components/SlidingBanner";
 
 function HomeKitchen() {
-  const [category, setCategory] = useState("")
+  const [category, setCategory] = useState("");
   const KitchenProducts = [
     { img: "bedding-and-decor.jpg", category: "bedroom" },
     { img: "appliances.jpg", category: "kitchen-appliances" },
@@ -17,7 +17,7 @@ function HomeKitchen() {
     { img: "amazon-brands.jpg", category: "lighting" },
   ];
   const filteredProducts = category
-    ? KitchenProducts.filter((item) => item.category ===category)
+    ? KitchenProducts.filter((item) => item.category === category)
     : KitchenProducts;
   const navStyle = ({ isActive }) => {
     return {
@@ -25,7 +25,12 @@ function HomeKitchen() {
       textDecoration: isActive ? "none" : "underline",
     };
   };
-  const kitchenImages = [{ src: "kitchenImages-1.webp" }, { src: "kitchenImages-2.jpg" }, { src: "kitchenImages-3.jpg" }, { src: "kitchenImages-4.webp" }];
+  const kitchenImages = [
+    { src: "kitchenImages-1.webp" },
+    { src: "kitchenImages-2.jpg" },
+    { src: "kitchenImages-3.jpg" },
+    { src: "kitchenImages-4.webp" },
+  ];
   return (
     <div>
       <div className=" px-1">
@@ -197,7 +202,7 @@ function HomeKitchen() {
         </aside>
         <div className="flex-1   overflow-hidden">
           <HorizontalOffer link="#" products={filteredProducts} />
-          <div className="flex justify-center mb-4">
+          <div className=" justify-center mb-4 ">
             <img
               src="home-kitchen-banner.png"
               className=" max-w-4xl rounded-lg"

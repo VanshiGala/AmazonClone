@@ -85,11 +85,11 @@ function AppNavbar() {
   return (
     <div className="w-full bg-gray-900 h-auto px-2 py-2 overflow-x-hidden">
       <div className="grid grid-cols-12 items-center ">
-        <div className="col-span-2 sm:col-span-2 md:col-span-1 xl:col-span-1 ">
+        <div className="col-span-1 sm:col-span-2 md:col-span-1 xl:col-span-1 ">
           <img src="Logo1.png" className="h-10 w-14" alt="Logo" />
         </div>
 
-        <div className="col-span-8 sm:col-span-6 md:col-span-8 lg:col-span-6 xl:col-span-6  flex items-center min-w-0">
+        <div className="col-span-7 sm:col-span-6 md:col-span-7 lg:col-span-6 xl:col-span-6  flex items-center min-w-0">
           <button className="bg-gray-400 p-2 text-sm rounded-l whitespace-nowrap min-w-0">
             {selectedCategory}
           </button>
@@ -103,56 +103,44 @@ function AppNavbar() {
           </button>
         </div>
 
-        <div className="col-span-2 sm:col-span-4 md:col-span-1 lg:col-span-2 xl:col-span-4  text-right mt-2 sm:mt-0">
-          <NavLink
-            to="#"
-            className="text-white hover:text-yellow-400 whitespace-nowrap"
-          >
-            Sign In
-          </NavLink>
-        </div>
-
-         {/* <div className=" md:flex col-span-8 justify-end gap-4 text-sm whitespace-nowrap ml-auto">
-          <div
-            className="relative"
-            onMouseEnter={() => setSignInModal(true)}
-            onMouseLeave={() => setSignInModal(false)}
-          >
-            <NavLink
-              to="/sign-in"
-              className="whitespace-nowrap hover:text-yellow-400"
+        <div className="col-span-4 sm:col-span-4 md:col-span-2 lg:col-span-2 xl:col-span-4 text-right mt-2 sm:mt-0">
+          <div className="flex justify-end items-center space-x-4 relative">
+            <div
+              className="relative"
+              onMouseEnter={() => setSignInModal(true)}
+              onMouseLeave={() => setSignInModal(false)}
             >
-              Sign In
-            </NavLink>
-            {signInModal && (
-              <div className="absolute top-full mt-2 right-0 w-64 bg-white text-black shadow-xl p-4 z-50 rounded border border-gray-300">
-                <h3 className="font-semibold mb-2 text-lg">
-                  Sign in to your account
-                </h3>
-                <button
-                  className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-1 cursor-pointer px-3 rounded"
-                  onClick={() => navigate("/sign-in")}
-                >
-                  Sign In
-                </button>
-                <p className="text-sm mt-3 text-gray-600">
-                  New customer?{" "}
-                  <span
-                    className="text-blue-600 cursor-pointer hover:underline"
+              <NavLink
+                to="/sign-in"
+                className="whitespace-nowrap hover:text-yellow-400 text-white"
+              >
+                Sign In
+              </NavLink>
+              {signInModal && (
+                <div className="absolute top-full mt-2 right-0 w-56 bg-white text-black shadow-xl p-4 z-50 h-24 rounded border border-gray-300">
+                  <button
+                    className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-1 cursor-pointer px-3 rounded"
                     onClick={() => navigate("/sign-in")}
                   >
-                    Start here.
-                  </span>
-                </p>
-              </div>
-            )}
-          </div> 
-        </div>*/}
-      </div> 
+                    Sign In
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* 🔵 Cart beside Sign In */}
+            <NavLink
+              to="/cart"
+              className="whitespace-nowrap hover:text-yellow-400 text-white"
+            >
+              Cart
+            </NavLink>
+          </div>
+        </div>
+      </div>
 
       <div className="w-full bg-gray-800 text-white text-sm sticky top-14 z-30">
         <div className="grid grid-cols-12 items-center h-10 px-2">
-          
           <div className="col-span-2 sm:col-span-2 md:col-span-1 lg:col-span-1 flex items-center gap-2">
             <button
               onClick={() => setSideNavOpen(true)}
@@ -165,7 +153,6 @@ function AppNavbar() {
             </NavLink>
           </div>
 
-        
           <div className="col-span-9 sm:col-span-10 md:col-span-10 lg:col-span-11 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-600 whitespace-nowrap flex gap-4 px-2">
             {secondNavItems.map((item, index) => (
               <NavLink
