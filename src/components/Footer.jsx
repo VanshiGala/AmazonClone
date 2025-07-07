@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <div className="bg-gray-800 w-full text-white px-4 py-6 h-70">
+      {/* <div className="bg-gray-800 w-full text-white px-4 py-6 h-70">
         <div className="w-full flex flex-wrap justify-between gap-2 text-sm">
           <div>
             <p className="font-bold text-lg">Get to know us!</p>
@@ -145,7 +145,49 @@ function Footer() {
             © 1996-2025, Amazon.com, Inc. or its affiliates
           </p>
         </div>
-      </div>
+      </div> */}
+      <footer className="bg-gray-900 text-white px-4 py-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div>
+            <h3 className="font-bold text-lg mb-2">Get to know us!</h3>
+            <ul className="space-y-1 text-sm text-gray-300">
+              <li>About Amazon</li>
+              <li>Careers</li>
+              <li>Press Releases</li>
+              <li>Amazon Science</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-2">Make money with us</h3>
+            <ul className="space-y-1 text-sm text-gray-300">
+              <li>Sell on Amazon</li>
+              <li>Become an Affiliate</li>
+              <li>Advertise Your Products</li>
+              <li>Amazon Global Selling</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-2">Connect with us</h3>
+            <ul className="space-y-1 text-sm text-gray-300">
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-2">Let Us Help You</h3>
+            <ul className="space-y-1 text-sm text-gray-300">
+              <li>Your Account</li>
+              <li>Returns Centre</li>
+              <li>100% Purchase Protection</li>
+              <li>Amazon App Download</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
