@@ -78,7 +78,7 @@ function HomeKitchen() {
         and much more online at Amazon.in
       </p>
       <div className="flex px-2 ">
-        <aside className="w-60 p-4 bg-white sticky   h-max shadow text-sm">
+        <aside className="w-48 p-4 bg-white sticky   h-max shadow text-sm">
           <ul>
             <li className="font-semibold text-md">Shop by room</li>
             <li>
