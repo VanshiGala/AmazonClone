@@ -9,10 +9,10 @@ function Computer() {
     };
   };
   return (
-    <div>
+    <div className="overflow-x-auto">
       <div className=" px-1">
         <nav className="bg-white py-4 ">
-          <div className="flex space-x-6 whitespace-nowrap text-sm">
+          <div className="flex space-x-6 whitespace-nowrap text-sm overflow-x-auto">
             <NavLink to="#" className="font-semibold text-gray-800">
               Electronics
             </NavLink>

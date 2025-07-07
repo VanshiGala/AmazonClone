@@ -30,7 +30,7 @@ function HomeKitchen() {
     <div>
       <div className=" px-1">
         <nav className="bg-white py-4 ">
-          <div className="flex space-x-6 whitespace-nowrap text-sm">
+          <div className="flex space-x-6 whitespace-nowrap text-sm overflow-x-hidden">
             <NavLink to="#" className="font-semibold text-gray-800">
               Amazon Home
             </NavLink>
