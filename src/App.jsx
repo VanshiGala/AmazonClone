@@ -18,13 +18,15 @@ function App() {
   const location = useLocation();
   const hideNavbar = location.pathname === "/sign-in";
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className=" w-full  min-h-screen ">
       {!hideNavbar && <AppNavbar />}
-
-      <SideNav />
-
-      <div className="flex-grow pt-20 ">
-        <Routes>
+      <br />
+      <div className="fixed top-0 left-0 h-full  ">
+        <SideNav />
+      </div>
+      {/* 
+      <div className="flex-grow ">
+        {/* <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products/ac" element={<AcPage />} />
           <Route path="/sign-in" element={<SignIn />} />
@@ -36,9 +38,9 @@ function App() {
           <Route path="/customer-service" element={<CustomerService />} />
           <Route path="/home-kitchen" element={<HomeKitchen />} />
           <Route path="/computer" element={<Computer />} />
-        </Routes>
-      </div>
-      {!hideNavbar && <Footer />}
+        </Routes> 
+      </div> */}
+      {/* {!hideNavbar && <Footer />} */}
     </div>
   );
 }

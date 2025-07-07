@@ -22,7 +22,7 @@ function HomePage() {
   ];
   return (
     <div className="mt-4 ">
-      <SlidingBanner images={homeImages}  />
+      <SlidingBanner images={homeImages} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
         <ProductCardSection
