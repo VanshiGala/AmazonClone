@@ -18,7 +18,7 @@ function SlidingBanner({ images }) {
             <img
               src={img.src}
               alt={img.alt || `banner-${index + 1}`}
-              className="w-full h-64 object-cover"
+              className="w-full h-96 object-cover"
             />
           </SwiperSlide>
         ))}

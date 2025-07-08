@@ -86,7 +86,7 @@ function AppNavbar() {
     <div className="w-full bg-gray-900 h-auto px-2 py-2 overflow-x-hidden">
       <div className="grid grid-cols-12 items-center ">
         <div className="col-span-1 sm:col-span-2 md:col-span-1 xl:col-span-1 ">
-          <img src="Logo1.png" className="h-10 w-14" alt="Logo" />
+          <img src="Logo1.png" className="h-10 w-20" alt="Logo" />
         </div>
 
         <div className="col-span-7 sm:col-span-6 md:col-span-7 lg:col-span-6 xl:col-span-6  flex items-center min-w-0">
