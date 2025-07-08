@@ -21,10 +21,10 @@ function HomePage() {
     { src: "/Banner3.jpg", alt: "Home Banner 3" },
   ];
   return (
-    <div className="mt-4 ">
+    <div className="flex-col min-h-screen ">
       <SlidingBanner images={homeImages} />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  ">
         <ProductCardSection
           title="Appliances for your home | Up to 55% off"
           items={[

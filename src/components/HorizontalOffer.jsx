@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 function HorizontalOffer({ title, products, link }) {
   return (
     <div className="bg-white p-4 shadow my-2">
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center ">
         <h2 className="text-lg font-semibold">{title}</h2>
         {link && (
           <a href={link} className="text-blue-500 text-sm hover:underline">
